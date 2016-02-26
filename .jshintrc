@@ -1,0 +1,8 @@
+{
+  "node": true,
+  "browser": true,
+  "jasmine": true,
+  "predef": [
+    "inject"
+  ]
+}
