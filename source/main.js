@@ -15,4 +15,7 @@ var app = angular.module('app', [
   require('./spinner')
 ]);
 
+var sp = require('angular-spinner');
+console.log('SP', sp);
+
 app.config(require('./routes'));

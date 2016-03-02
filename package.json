@@ -60,7 +60,8 @@
   },
   "browser": {
     "angular-loading-bar": "./bower_components/angular-loading-bar/src/loading-bar.js",
-    "angular-spinner": "./node_modules/angular-spinner/angular-spinner.js"
+    "angular-spinner": "./node_modules/angular-spinner/angular-spinner.js",
+    "spin.js": "./node_modules/angular-spinner/node_modules/spin.js/spin.js"
   },
   "browserify-shim": {
     "angular-loading-bar": {
@@ -70,6 +71,10 @@
       "exports": "angular.module('angular-loading-bar').name"
     },
     "angular-spinner": {
+      "depends": [
+        "angular:angular",
+        "spin.js:Spinner"
+      ],
       "exports": "angular.module('angularSpinner').name"
     },
     "liveaddress": {
