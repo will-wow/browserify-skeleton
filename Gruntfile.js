@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 		'clean:dev',
 		'sass:dev',
 		'browserify:dev',
-		'copy:dev',
+		'sync:dev',
 		'connect',
 		'watch'
 	]);
