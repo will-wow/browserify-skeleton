@@ -3,12 +3,16 @@
 var angular = require("angular");
 
 var routesConfig = /*@ngInject*/ function (
+  $urlRouterProvider,
   $stateProvider
 ) {
 
+  // For any unmatched url, redirect to /state1
+  $urlRouterProvider.otherwise("/spinner");
+
   $stateProvider
     .state('spinner', {
-      url: '/',
+      url: '/spinner',
       templateUrl: './spinner/spinner.html',
       controller: 'SpinnerController',
       controllerAs: 'ctrl'

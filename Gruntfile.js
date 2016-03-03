@@ -13,7 +13,6 @@ module.exports = function (grunt) {
 		'browserify:dev',
 		'sync',
 		'htmlbuild:dev',
-		'hashres:dev',
 		'connect:dev',
 		'watch'
 	]);
