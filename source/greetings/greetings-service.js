@@ -19,7 +19,7 @@ var greetingsFactory = /*@ngInject*/ function (
     var shuffledColors =  _.shuffle(COLORS);
 
     return _.zipWith(shuffledGreetings, shuffledColors, combineAttributes);
-  }
+  };
 };
 
 module.exports = greetingsFactory;

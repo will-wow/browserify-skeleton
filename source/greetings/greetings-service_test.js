@@ -1,7 +1,7 @@
 'use strict';
 
 var angular = require('angular');
-var testUtils = require('.')
+var testUtils = require('../../test-utils');
 
 describe('greetings service', function () {
   var greetings;
@@ -16,16 +16,25 @@ describe('greetings service', function () {
     greetings = _greetings_;
   }));
 
-  it('should output a six greetings', function () {
-    var someGreetings = greetings();
+  describe('greetings', function () {
+    it('should output a six greetings', function () {
+      var someGreetings = greetings();
 
-    expect(someGreetings.length).toBe(6);
+      expect(someGreetings.length).toBe(6);
+    });
+
+    it('should have a greeting and a color', function () {
+      var someGreetings = greetings();
+      var greeting = someGreetings[0];
+      expect(greeting.message).toBeDefined();
+      expect(greeting.color).toBeDefined();
+    });
   });
 
-  it('should have a greeting and a color', function () {
-    var someGreetings = greetings();
-    var greetings = someGreetings[0];
-    expect(greetings.message).toBeDefined();
-    expect(greetings.color).toBeDefined();
+  // Just testing that the test-utils work.
+  describe('utils', function () {
+    it('should exist', function () {
+      expect(testUtils.sample()).toBe('this is a test.');
+    });
   });
 });

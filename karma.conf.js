@@ -17,24 +17,24 @@ module.exports = function(config) {
     files: [
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
-      'source/test-utils/**/*.js',
-      'source/public/js/main.js',
+      'test-utils/**/*.js',
+      'source/main.js',
       {
-        pattern: 'source/public/js/**/!(*-spec).js',
+        pattern: 'source/**/!(*_test).js',
         watched: true,
         included: false,
         served: false
       },
-      'source/public/**/*.html',
-      'source/public/js/**/*-spec.js'
+      'source/**/*.html',
+      'source/**/*_test.js'
     ],
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-      'source/public/js/**/*.js': ['browserify'],
-      'source/test-utils/**/*.js': ['browserify'],
-      'source/public/**/*.html': ['ng-html2js']
+      'source/**/*.js': ['browserify'],
+      'test-utils/**/*.js': ['browserify'],
+      'source/**/*.html': ['ng-html2js']
     },
 
     ngHtml2JsPreprocessor: {

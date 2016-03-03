@@ -15,7 +15,8 @@ module.exports = function(grunt) {
         expand:true,
         cwd:'source/',
         src:['main.js'],
-        dest:'dev/'
+        dest:'dev/',
+        exclude:['test-utils/**.*']
       }
     ]
   };
