@@ -1,12 +1,22 @@
 // 'grunt-sync'
 module.exports = function(grunt) {
   return {
-    dev: {
+    source: {
       files: [{
         cwd: './source',
-        src: ['**/*', '!/js/**/*.js'],
+        src: ['**/*', '!**/*.scss', '!**/*.js'],
         dest: 'dev'
       }]
+    },
+    libs: {
+      files: [
+        // font-awesome fonts
+        {
+          cwd: 'node_modules/font-awesome/fonts',
+          src: ['**/*.*'],
+          dest: 'dev/fonts'
+        }
+      ]
     }
   };
 };

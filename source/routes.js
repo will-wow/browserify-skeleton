@@ -11,13 +11,13 @@ var routesConfig = /*@ngInject*/ function (
       url: '/',
       templateUrl: './spinner/spinner.html',
       controller: 'SpinnerController',
-      controllerAs: 'spinner'
+      controllerAs: 'ctrl'
     })
     .state('greetings', {
       url: '/greetings',
       templateUrl: './greetings/greetings.html',
       controller: 'GreetingsController',
-      controllerAs: 'greetings'
+      controllerAs: 'ctrl'
     });
 };
 

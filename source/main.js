@@ -10,12 +10,9 @@ var app = angular.module('app', [
   require('angular-spinner'),
   // This one's from bower, but doesn't support CommonJS
   require('angular-loading-bar'),
-
+ 
   require('./greetings'),
   require('./spinner')
 ]);
-
-var sp = require('angular-spinner');
-console.log('SP', sp);
 
 app.config(require('./routes'));

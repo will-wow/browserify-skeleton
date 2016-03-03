@@ -9,15 +9,17 @@ var tickDotsUp = function (count) {
 };
 
 var SpinnerController = /*@ngInject*/ function (
-  $timeout
+  $interval
 ) {
   var self = this;
   var dotCount = 0;
 
-  $timeout(function () {
+  self.dots = _.range(dotCount + 1);
+
+  $interval(function () {
     dotCount = tickDotsUp(dotCount);
     // Update the dots array, which will ng-repeat will use to display dots.
-    self.dots = _.range(dotCount);
+    self.dots = _.range(dotCount + 1);
   }, 500);
 };
 

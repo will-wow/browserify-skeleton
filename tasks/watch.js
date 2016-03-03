@@ -2,8 +2,7 @@
 module.exports = function(grunt) {
   return {
     options: {
-      livereload: true,
-      spawn: false
+      livereload: true
     },
     scss: {
       files: ['source/**/*.scss'],
@@ -11,7 +10,7 @@ module.exports = function(grunt) {
     },
     assets: {
       // Assets to watch:
-      files: ['source/**/*.json', 'source/**/*.!(js)', '!**/node_modules/**'],
+      files: ['source/**/*.json', 'source/**/*.!(js)'],
 
       // When source are changed:
       tasks: ['sync:dev']

@@ -10,9 +10,19 @@ module.exports = function (grunt) {
 		'clean:dev',
 		'sass:dev',
 		'browserify:dev',
-		'sync:dev',
+		'sync',
 		'connect',
 		'watch'
+	]);
+
+	grunt.registerTask('build', [
+		'jshint',
+		'clean',
+		'sass:prod',
+		'browserify:dev',
+		'copy',
+		'ngAnnotate',
+		'copy:prod'
 	]);
 
 	grunt.registerTask('test', 'run unit tests', function (type) {

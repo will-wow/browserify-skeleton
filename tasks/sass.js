@@ -2,9 +2,9 @@
 module.exports = function(grunt) {
   var files = [{
     expand: true,
-    cwd: 'source/public/sass/',
+    cwd: 'source/',
     src: ['styles.scss'],
-    dest: 'dev/public/css/',
+    dest: 'dev/',
     ext: ".css"
   }];
 
@@ -14,8 +14,8 @@ module.exports = function(grunt) {
       options: {
         sourcemap: 'inline',
         style: "expanded",
-        // add bootstrap to the sass loadpath
-        loadPath: ["node_modules/bootstrap-sass/assets/stylesheets/", "bower_components/"]
+        // add fontawesome, and stuff from bower, to the sass loadpath
+        loadPath: ["node_modules/font-awesome/scss/font-awesome.scss/", "bower_components/"]
       }
     },
     prod: {
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
         sourcemap: 'none',
         style: "compressed",
         // add bootstrap to the sass loadpath
-        loadPath: ["node_modules/bootstrap-sass/assets/stylesheets/", "bower_components/"]
+        loadPath: ["node_modules/font-awesome/scss/font-awesome.scss/", "bower_components/"]
       }
     }
   };
