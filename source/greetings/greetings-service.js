@@ -12,6 +12,13 @@ var combineAttributes = function (message, color) {
   };
 };
 
+var untestedFunction = function () {
+  // This function won't get tested. Sad for it.
+  var foo = 'foo';
+  var bar = 'bar';
+  return foo + bar;
+};
+
 var greetingsFactory = /*@ngInject*/ function (
 ) {
   return function () {

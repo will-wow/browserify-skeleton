@@ -19,6 +19,9 @@ module.exports = function(config) {
       'node_modules/angular-mocks/angular-mocks.js',
       'test-utils/**/*.js',
       'source/main.js',
+      // Watch the srouce files to re-test when they're changed, but don't
+      // actually include them in the browserify bundle, since main.js has that
+      // covered.
       {
         pattern: 'source/**/!(*_test).js',
         watched: true,

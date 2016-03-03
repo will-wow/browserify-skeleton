@@ -18,11 +18,15 @@ module.exports = function(grunt) {
         transform: [
           [{
             ignore: [
+              // index.js files just set up modules, so we can ignore them.
+              '**/index.js',
+              // Don't check test coverage of tests
               '**/*_test.js',
-              '**/config.js',
+              '**/test-utils/**',
+              // This stuff is all boilerplate.
               '**/main.js',
               '**/routes.js',
-              '**/test-utils/**',
+              // Since we're requiring html files, make sure to not report on them.
               '**/*.html'
             ],
 
