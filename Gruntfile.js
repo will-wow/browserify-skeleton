@@ -12,7 +12,9 @@ module.exports = function (grunt) {
 		'sass:dev',
 		'browserify:dev',
 		'sync',
-		'connect',
+		'htmlbuild:dev',
+		'hashres:dev',
+		'connect:dev',
 		'watch'
 	]);
 
@@ -20,10 +22,17 @@ module.exports = function (grunt) {
 		'jshint',
 		'clean',
 		'sass:prod',
-		'browserify:dev',
-		'copy',
+		'browserify:prod',
+		'sync',
 		'ngAnnotate',
+		'uglify',
+		'htmlbuild:prod',
+		'hashres:prod',
 		'copy:prod'
+	]);
+
+	grunt.registerTask('servebuilt', [
+		'connect:prod'
 	]);
 
 	grunt.registerTask('test', 'run unit tests', function (type) {

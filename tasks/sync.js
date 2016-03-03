@@ -2,14 +2,13 @@
 module.exports = function(grunt) {
   return {
     source: {
-      files: [{
-        cwd: './source',
-        src: ['**/*', '!**/*.scss', '!**/*.js'],
-        dest: 'dev'
-      }]
-    },
-    libs: {
       files: [
+        // Source files (no sass or js, they're built seperatly)
+        {
+          cwd: './source',
+          src: ['**/*', '!**/*.scss', '!**/*.js'],
+          dest: 'dev'
+        },
         // font-awesome fonts
         {
           cwd: 'node_modules/font-awesome/fonts',

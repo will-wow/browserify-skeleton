@@ -2,15 +2,7 @@
 
 module.exports = function(grunt) {
 	return {
-		dev: {
-			files: [{
-				expand: true,
-				cwd: './source',
-				src: ['**/*.*','!**/*.scss','!**/*.js'], // don't copy js, but copy module's html templates.
-				dest: 'dev'
-			}]
-		},
-		build: {
+		prod: {
 			files: [{
 				expand: true,
 				cwd: 'dev',
