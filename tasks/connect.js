@@ -3,8 +3,8 @@ module.exports = function (grunt) {
   return {
     server: {
       options: {
-        hostname: '0.0.0.0',
-        protocol: 'http',
+        // livereload doesn't seem to be working with 0.0.0.0
+        hostname: 'localhost',
         // localhost port to connect to
         port: 3000,
         // Directory to serve
